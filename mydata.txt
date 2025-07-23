@@ -1,0 +1,255 @@
+Praveen Kumar Nutulapati
+Generative AI Engineer
+Email: pknpraveenus@gmail.com
+Contact No: 913-565-8243
+
+PROFESSIONAL SUMMARY:
+- Experienced Senior Generative AI Engineer with 7+ years a strong background in designing and fine-tuning large-scale AI models such as GPT, BERT, and Stable Diffusion to address complex business-specific challenges, including NLP tasks such as summarization, classification, and generation.
+- Specialized in Generative Models, leveraging deep learning techniques such as GANs and VAEs for synthetic image generation and anomaly detection, optimizing model performance in real-time environments using PyTorch and TensorFlow.
+- Proven expertise in orchestrating end-to-end AI solutions using cloud platforms such as Azure and AWS, integrating data pipelines with Azure Data Factory, Databricks, and Event Hubs for seamless data processing.
+- Skilled in Text-to-Image Generation, optimizing diffusion models and Stable Diffusion pipelines to generate high-quality images, contributing significantly to creative and marketing industries through faster.
+- Proficient in building scalable Generative AI Applications using Fast API, Streamlit, Docker, and Kubernetes, ensuring robust deployment and maintenance for secure, real-time user access.
+- Expert in Conversational AI, integrating OpenAI and Cohere APIs to build intelligent assistants with dynamic memory, enabling more personalized and responsive user interactions.
+- Experienced in Data Augmentation using generative models to expand datasets for computer vision and NLP tasks, significantly improving model performance and training data diversity.
+- Skilled in AI Deployment Automation, leveraging Git, GitHub Actions, Docker, and Kubernetes for continuous integration and deployment (CI/CD), ensuring the reproducibility and scalability of AI solutions.
+- Extensive experience in designing Personalized Recommendation Systems driven by generative AI, using user behavior data to improve engagement and retention across various platforms.
+- Proven Leadership in AI Development, managing full AI model lifecycles from design to production, ensuring the responsible deployment of generative AI models while adhering to ethical AI practices.
+- Hands-on Experience with Vector Databases such as Pinecone, using embeddings models such as OpenAI’s Ada and Sentence Transformers to enhance search and clustering capabilities for document and content management.
+- Led the creation of Interactive AI Dashboards and UI components with Gradio and Streamlit, empowering stakeholders with real-time insights into generative model outputs and performance.
+- Experienced in Responsible AI Implementation, applying fairness evaluation tools to mitigate bias and ensure transparency and equity in model outcomes across diverse user demographics.
+- Advanced Power BI Expertise, delivering robust and insightful dashboards using complex DAX calculations, custom visuals, and real-time reporting capabilities for business decision-making.
+- Deep Knowledge of Cloud Technologies, skilled in managing and optimizing AI models on cloud platforms such as AWS, Azure, and Snowflake, ensuring high availability, scalability, and security.
+- Proficient in Monitoring and Securing Data Pipelines, leveraging AWS CloudTrail, CloudWatch, and IAM policies to maintain compliance, mitigate risks, and ensure operational efficiency.
+- Extensive experience in Data Pipeline Optimization, using Apache Spark, PySpark, and Hadoop ecosystems to process large datasets with a focus on fault tolerance and performance improvements.
+- Expertise in Real-Time Data Processing, applying Spark Streaming and Kafka for the continuous ingestion and processing of telemetry and behavioral data, driving timely insights and analytics.
+- Collaborative Approach with data engineers, scientists, and analysts, ensuring seamless integration and processing of data from diverse sources using ETL tools such as Informatica and PySpark.
+- Skilled in Cloud-Based Data Integration and Migration, driving successful transitions to Snowflake and AWS environments while enhancing data accessibility, sharing, and scalability.
+
+TECHNICAL SKILLS:
+Programming Languages: Python, SQL, PL/SQL
+Generative AI: GPT, BERT, Stable Diffusion, GANs, VAEs, Text-to-Image Generation, Unsloth, LangChain, Stable Diffusion pipelines, OpenAI, Cohere APIs, Conversational AI, LLMs
+Cloud Platforms: Azure, AWS
+Data Integration & Pipelines: Azure Data Factory, Databricks, Snowflake, Informatica, Apache Spark, PySpark, Kafka, Apache Flume, Apache Airflow, Sqoop, Kafka Connect, ETL, Lambda
+Data Analytics & Visualization: Power BI (DAX, complex calculations, real-time reporting), Tableau (Server Publishing, Role Management, Dashboards, Calculated Fields), Looker, Gradio, Streamlit
+Model Training & Deployment: PyTorch, TensorFlow, Fast API, Docker, Kubernetes, Git, GitHub Actions, CI/CD, GitLab, Kubernetes, Dockerized environments, API-based model deployment
+Data Processing & Transformation: Pandas, NumPy, Spark Streaming, PySpark, MapReduce, Hadoop, Hive, Pig, HDFS, YARN
+Database Management: SQL Server, MySQL, PostgreSQL, MongoDB, Cassandra, HBase, Snowflake, Oracle, NoSQL, Pinecone, FAISS
+Machine Learning: Supervised and Unsupervised Learning, Generative AI, Anomaly Detection, NLP, Data Augmentation, A/B Testing
+AI Ethical Practices: Fairness Evaluation, Bias Mitigation, Responsible AI, Ethical AI
+Version Control & Collaboration: Git, GitHub, GitLab, SVN
+AI and Model Pipelines: Lang Chain, RAG Architecture, Embeddings Models (Ada, Sentence Transformers), Generative AI Pipelines, API-based Integration
+
+PROFESSIONAL EXPERIENCE:
+
+Client: JPMorgan Chase & Co., New York, NY
+Role: Gen AI Engineer
+Duration: May 2024 – Present
+Responsibilities:
+- Designed and fine-tuned large language models (LLMs) such as GPT, BERT, and Hugging Face Transformers to solve business-specific natural language processing tasks including summarization, classification.
+- Created and deployed GANs and VAEs for synthetic image generation and anomaly detection, using PyTorch and TensorFlow, optimizing model performance for real-time inference.
+- Leveraged Azure Data Factory to build, schedule, and orchestrate data integration pipelines between Azure Blob Storage, and Synapse Analytics.
+- Fine-tuned diffusion models and Stable Diffusion pipelines for text-to-image generation applications in creative and marketing industries, optimizing image quality and generation speed.
+- Applied and deployed LLM-based applications using Fast API and Streamlit, with Dockerized environments orchestrated by Kubernetes for scalable and secure access.
+- Created conversational UIs and interactive dashboards with Gradio and Streamlit to test and demonstrate generative model capabilities to cross-functional stakeholders.
+- Integrated Azure Event Hubs with Azure Data Lake Storage and Databricks to handle massive-scale telemetry data for IoT and behavioral analytics.
+- Implemented data augmentation strategies for generating new, diverse datasets, leveraging generative models to enhance training data for computer vision and NLP tasks.
+- Created generative AI-driven recommendation systems, using user behavior data to generate personalized content and suggestions, leading to an increase in user engagement and retention rates.
+- Leveraged embeddings models such as OpenAI’s Ada and Sentence Transformers for document similarity, clustering, search applications using vector databases.
+- Integrated Git, GitHub Actions, and Docker for continuous integration and deployment (CI/CD) of generative AI services, ensuring model reproducibility and version control.
+- Scheduled and automated report refreshes via Power BI Gateway to ensure up-to-date insights for executive and operational teams.
+- Delivered internal training and documentation on best practices in prompt engineering, fine-tuning LLMs, and deploying GenAI models responsibly across cloud platforms.
+- Conducted A/B testing and user feedback loops on GenAI applications to iteratively improve prompt design, response relevance, and overall user satisfaction.
+- Managed the full lifecycle of generative AI models, from initial design to production deployment, utilizing Agile methodologies to deliver iterative improvements and updates to stakeholders.
+- Implemented responsible AI practices by evaluating and mitigating biases in generative models, using fairness evaluation libraries and transparency checklists.
+- Integrated OpenAI and Cohere APIs for conversational AI, building intelligent assistants with prompt engineering techniques, dynamic memory, and structured output generation.
+- Implemented ethical AI standards by developing tools to audit and mitigate bias in generative models, ensuring that the AI's outputs are equitable and non-discriminatory across different demographic groups.
+- Designed interactive dashboards and reports in Power BI using complex DAX measures, calculated columns, and custom visuals for data storytelling.
+- Developed end-to-end generative AI pipelines leveraging retrieval-augmented generation (RAG) architecture using Lang Chain, vector databases (Pinecone/FAISS), and custom embeddings for enterprise chatbot solutions.
+Environment: GPT, BERT, Hugging Face Transformers, PyTorch, TensorFlow, Azure Data Factory, Blob Storage, Synapse Analytics, Fast API, Streamlit, Docker, Kubernetes, Gradio, Azure Event Hubs, Data Lake Storage, Databricks, Data Augmentation, Generative Models, OpenAI Ada, Git, GitHub Actions, Power BI Gateway, Prompt Engineering, Agile, Fairness Evaluation Libraries, OpenAI API, Cohere API, Dynamic Memory, Structured Output Generation, Ethical AI, Power BI, DAX, Retrieval-Augmented Generation (RAG), Lang Chain, Pinecone, FAISS.
+
+Client: Pfizer, New York
+Role: Data Engineer
+Duration: Mar 2023 – Apr 2024
+Responsibilities:
+- Orchestrated data workflows using AWS Step Functions and AWS Lambda functions, enabling event-driven automation of end-to-end data ingestion processes.
+- Monitored and secured data infrastructure using AWS CloudTrail, IAM policies, and AWS CloudWatch logs, ensuring compliance and operational efficiency.
+- Collaborated with data analysts and scientists to deliver clean, structured datasets using Informatica and ETL tools, optimizing the entire data preparation lifecycle.
+- Designed and executed data preprocessing pipelines using Pandas, NumPy, and PySpark to clean, transform, and embed large datasets for downstream generative model training.
+- Designed and implemented scalable ETL pipelines using Apache Spark and Python to process terabytes of data from heterogeneous sources, significantly improving data ingestion efficiency.
+- Implemented fault-tolerant mechanisms in Spark streaming jobs using checkpointing and custom error handling logic for robust data processing.
+- Integrated Apache Spark with Hive and external JDBC sources for cross-platform data ingestion and analysis in a distributed compute environment.
+- Utilized Kafka Connect to integrate data sources such as RDBMS and cloud storage with Kafka topics, supporting both source and sink connectors.
+- Implemented unit tests and exception handling in PySpark code to ensure data pipeline reliability and prevent data loss during transformations.
+- Maintained and enhanced big data environments including Hadoop, HDFS, and YARN to process high-volume batch jobs using Hive and MapReduce.
+- Worked and scalable data processing workflows using Hadoop MapReduce and process petabyte-scale log files and customer data for analytics.
+- Developed and maintained complex SQL and PL/SQL scripts to transform and cleanse large datasets for reporting, analytics, and machine learning use cases.
+- Integrated and synchronized data from various NoSQL and relational databases such as MongoDB, Cassandra, to support hybrid analytics.
+- Automated data workflows in Apache Airflow, enabling dynamic scheduling, dependency tracking, and monitoring across multiple data pipelines.
+- Applied Git, GitHub, and GitLab for version control, running code collaboration, and maintaining reproducible and auditable pipelines in a CI/CD environment.
+- Developed and maintained Snowflake data warehouses, optimizing the performance of large-scale ETL pipelines by leveraging Snowflake's automatic scaling and partitioning features to ensure seamless data processing.
+- Managed Tableau Server publishing, user roles, and access permissions to ensure secure and scalable content delivery.
+- Collaborated with data engineering and analytics teams to align Tableau visualizations with business logic and backend data sources.
+Environment: AWS Step Functions, Lambda, CloudTrail, IAM, CloudWatch, Informatica, ETL, Pandas, NumPy, PySpark, Apache Spark, Python, Spark Streaming, Hive, JDBC, Kafka Connect, RDBMS, Hadoop, HDFS, YARN, MapReduce, SQL, PL/SQL, MongoDB, Cassandra, Apache Airflow, Git, GitHub, GitLab, CI/CD, Snowflake, Tableau Server.
+
+Client: Amara Raja Group, Hyderabad, India
+Role: Data Engineer
+Duration: Nov 2019 – Jul 2022
+Responsibilities:
+- Developed and orchestrated scalable data integration workflows using Azure Data Factory pipelines and Azure Functions for scheduled and event-driven execution.
+- Designed and maintained end-to-end data pipelines using Azure Data Factory, enabling seamless extraction, transformation, and loading (ETL) from diverse sources into Azure SQL DB.
+- Developed complex ETL mappings using Informatica PowerCenter to extract, transform, and load data from heterogeneous systems into enterprise data warehouses.
+- Built secure and reliable data APIs and microservices using Python and RESTful frameworks to expose curated data to third-party applications and services.
+- Leveraged Spark Streaming to process real-time data from Kafka, ensuring near real-time insights and alerting mechanisms.
+- Optimized PySpark jobs through code vectorization, caching, and partitioning strategies to improve execution time and reduce memory overhead.
+- Managed and configured Hadoop clusters with Cloudera/Hortonworks distributions for enterprise-grade data lake operations.
+- Used Apache Sqoop and Flume to import and export large volumes of data between Hadoop clusters and external relational databases for backup and integration purposes.
+- Configured and tuned NoSQL clusters for horizontal scalability and failover support, ensuring minimal downtime and high availability.
+- Automated data workflows using Airflow's scheduling and sensor capabilities to handle file arrivals, API updates, and time-based triggers.
+- Led the migration of on-premise databases to Snowflake, utilizing the Snowflake cloud platform's data-sharing capabilities to ensure seamless data integration across.
+- Created and published dashboards using Power BI, and Looker, enabling business teams to track key performance metrics and data insights in real time.
+- Published and maintained dashboards in Power BI Service, managing workspaces, permissions, and user access efficiently.
+Environment: Azure Data Factory, Functions, SQL DB, Informatica PowerCenter, Python, RESTful frameworks, Spark Streaming, Kafka, PySpark, Hadoop, Cloudera, Hortonworks, Apache Sqoop, Apache Flume, NoSQL, Apache Airflow, Snowflake, Power BI, Looker, Power BI Service.
+
+Client: HDFC Life, Mumbai, India
+Role: Data Engineer
+Duration: Aug 2017 – Oct 2019
+Responsibilities:
+- Created and optimized data lakes and data warehouses using Amazon S3, AWS EC2, and AWS ensuring fast query performance and cost efficiency.
+- Ensured data availability and disaster recovery by implementing cross-region replication and backup strategies using Amazon RDS and AWS S3 lifecycle policies.
+- Configured and maintained Informatica workflows and sessions, managing dependencies, failure recovery, and reprocessing mechanisms.
+- Integrated Python-based machine learning models with data pipelines to automate predictive analytics, providing real-time insights and improving decision-making accuracy across the organization.
+- Tuned Spark job performance by adjusting memory configurations, partitioning strategies, and broadcast joins to handle skewed data and resource bottlenecks.
+- Collaborated with analysts and ML engineers to prepare and clean data using PySpark, supporting downstream analytics and model training processes.
+- Performed data transformations using Hadoop, Pig and Hive scripts, enabling business analysts to run SQL-like queries on large datasets.
+- Created advanced Tableau dashboards with interactive filters, parameters, and calculated fields to support real-time decision-making.
+- Extracted and transformed data using Tableau Prep to create curated datasets for business reporting and self-service analytics.
+Environment: Amazon S3, AWS EC2, RDS, S3 lifecycle policies, Informatica, Python, Spark, PySpark, Hadoop, Pig, Hive, Tableau, Tableau Prep.
+
+EDUCATION:
+BTech in Mechanical Engineering, Aug 2014 - May 2018 at JNTUH, India
+Masters in Computer Science, Aug 2022 - Dec 2024 at University of Central Missouri
+
+VISA:
+I'm currently on my OPT, I came to United States of America on F1 visa on Augest 1st 2022. I have completed my Master's in Computer Science at University of Central Missouri with a Grade "A".
+
+Personal Information:
+
+First Name : Praveen
+Middle Name : Kumar
+Last Name: Nutulapati
+
+Age : 28 Years
+
+Date of Birth : 11-Aug-1996
+Country of Birth : India
+Marital Status : Single
+
+USA Address: 10324 Consor St, Apartment 2P, Indian Creek; 
+City: Overland Park ; 
+State: Kansas
+Currently living in : USA
+
+Father's Name : Bala Swamy
+Mother's Name: Seromani
+Brother's Name: Sagar
+Elder Sister's Name: Jyothi
+Younger Sister's Name: Manju
+
+
+Mobile number: 913 565 8243
+Email: pknpraveenus@gmail.com
+
+Hobbies : Playing Video Games, Building computers, Learning new stuff in technology field, reading, web scrapping
+
+Skills: Computer Hardware, Programming, Communication, Selling, Adapting, Quick Learning, Quick Thinking
+
+Work Experiences : 
+
+1. Generative Artificial Intelligence Engineer working from 2024 May to Present which is 1 year 3 months as of July 2025
+2. Data Engineer at Pfizer 1 year 3 months from March 2023 to April 2024
+    Data Engineer at Amara Raja for 2 years 9 months from November 2019 to July 2022
+    Data Engineer at HDFC Life for 2 years 3 months from Aug 2017 to Oct 2019
+3. Machine Learning 
+
+Height : 5'5' (Five Feet Five Inches)
+Weight : 73 Kgs
+Current Car: Ford Fusion Titanium -- 2016 -- Ruby Red
+Next Car: Audi RS5 - 2022 - Red
+
+
+
+Master's Information: I completed my Master's in Computer Science with Grade A and GPA: 3.4 in University of Central Missouri in the Year 2024. I started my master's in the year 2022 Aug. In my Course curriculum I did Artificial Intelligence, Machine Learning, Deep Learning, Database Theories and Apps, Cloud Computing, Complier Designing, Advance Algorithms, Advanced Stat Found, x
+
+Bachelor's Information: I did my Bachelor's in Mechanical Engineering in the year 2014 to 2018 in JNTUH, Hyderabad with a Grade A.
+
+
+
+Work related:
+
+I'm open to work currently. My project with my current employer is going to end soon and I want to switch my job. I can work on Corp to Corp which is C2C or Contract to hire which is C2H.. I'm on my OPT EAD and have work authorization till Feb 2026 and can extend up to 2 years on STEAM OPT next.. I also have my current employer who is going to sponsor me H1B. I'm flexible with Remote positions and On-site positions and also hybrid positions. I'm currently living in Overaland Park, Kansas and can relocate to any state or city with in United States Of America. My expected salary is around 75$ to 85$ per hour flexible with negotiation. I worked across different fields like Health Insurance, Manufacturing, Medical and currently in Financial Industry. 
+
+
+
+Generative AI Engineer – JPMorgan Chase & Co. | May 2024 – Present
+
+At JPMorgan Chase, I worked as a Generative AI Engineer in the AI Research & Applied AI team, driving multiple projects to integrate generative AI capabilities into banking workflows with a focus on security, explainability, and real-world business value.
+
+Key Projects & Responsibilities
+
+1. RAG-based Knowledge Assistant for Investment Banking
+Problem: Investment bankers spent significant time searching across internal deal documents, market reports, and legal frameworks.
+Solution: Designed and deployed a Retrieval-Augmented Generation (RAG) chatbot to act as an intelligent knowledge assistant.
+Tasks & Technologies:
+- Collected ~200,000 documents including pitch books, market analyses, and internal PDFs.
+- Vector Database: Used Pinecone for embedding storage and retrieval.
+- Embeddings: Generated using OpenAI Ada-002 initially, later switched to in-house fine-tuned BERT for better domain accuracy.
+- LLM Backbone: GPT-3.5 turbo and GPT-4 for generation; integrated via LangChain with custom retrieval pipelines.
+- Chunking & Preprocessing: Developed chunking pipelines with text splitting strategies (overlapping windows, recursive splits) ensuring semantic completeness in each chunk.
+- Deployment: Built a FastAPI backend, containerized with Docker, orchestrated via Kubernetes on Azure AKS.
+- UI: Streamlit prototype evolved into React-based internal web app with enterprise SSO integration.
+- Security: Implemented data encryption at rest (Azure Key Vault) and integrated user context filters for retrieval to enforce document-level access controls.
+Outcome: Reduced average document search time from ~20 minutes to <2 minutes per query, improving banker productivity significantly.
+
+2. Fine-Tuning LLMs for Financial Question Answering
+Problem: Off-the-shelf LLMs failed to answer nuanced financial compliance and trading strategy questions.
+Solution: Fine-tuned LLMs on internal compliance manuals, risk management frameworks, and proprietary training datasets.
+Tasks & Technologies:
+- Model: Fine-tuned Qwen-0.6B and LLaMA-2-7B models using LoRA and QLoRA techniques for parameter-efficient training.
+- Data Pipeline: Created a data preprocessing pipeline using PySpark to clean, tokenize, and prepare datasets (~50GB) efficiently on Azure Databricks.
+- Training Framework: Used Hugging Face Transformers and PEFT libraries; training conducted on internal GPU clusters (A100 multi-node setup).
+- Evaluation: Designed custom evaluation scripts to test accuracy on >1,000 domain-specific queries, ensuring outputs adhered to regulatory guidelines.
+Outcome: Improved factual accuracy on internal financial QA benchmark from 68% (base model) to 87% (fine-tuned model).
+
+3. Generative Document Summarization for Risk Management Reports
+Problem: Risk analysts received >500-page daily reports which were time-consuming to process.
+Solution: Built an abstractive summarization pipeline using fine-tuned T5 models to create concise executive summaries.
+Tasks & Technologies:
+- Used transfer learning to fine-tune T5-Large with risk report summaries curated by analysts.
+- Implemented chunk-wise summarization with final aggregation for coherence.
+- Deployed via Flask REST API with Celery queues for scalable asynchronous processing.
+- Integrated with SharePoint for automatic saving and notifications.
+Outcome: Reduced analyst reading time by ~65%, enabling faster decision-making on market risks.
+
+4. Generative Data Augmentation for Fraud Detection Models
+Problem: Imbalanced datasets led to underperforming fraud detection models.
+Solution: Developed GAN-based data augmentation pipelines.
+Tasks & Technologies:
+- Implemented CTGAN using PyTorch to generate realistic synthetic transaction data.
+- Validated generated data distributions against real data using KS tests and feature-wise analysis.
+- Integrated augmented data into XGBoost-based fraud models, improving recall by 7% on minority fraud classes.
+
+Core Technologies & Tools
+- LLMs & NLP: GPT-3.5, GPT-4, Qwen-0.6B, LLaMA-2-7B, T5, BERT, PEFT, LoRA, QLoRA, LangChain
+- Data & Vector DBs: Pinecone, FAISS, Azure Data Lake, Azure Blob Storage
+- Frameworks: Hugging Face Transformers & Diffusers, PyTorch, TensorFlow
+- APIs & Deployment: FastAPI, Flask, Docker, Kubernetes (AKS)
+- Cloud: Azure (Data Factory, Synapse Analytics, Databricks, Key Vault), minimal AWS S3 usage for certain R&D experiments
+- MLOps: MLflow for experiment tracking, CI/CD with GitHub Actions, Azure DevOps
+- Security & Compliance: Encryption, RBAC, user context filtering, audit logging
+- Visualization & UI: Streamlit, React, Power BI for showcasing outcomes to stakeholders
+
+Key Achievements
+- Deployed production-grade RAG chatbot within 6 months with 99.9% uptime
+- Achieved a 25% reduction in operational overhead for investment banking research tasks
+- Conducted training sessions to upskill team members on LangChain, PEFT, and generative AI deployment best practices
+- Contributed to internal whitepapers on LLM alignment and hallucination mitigation strategies for banking use cases
