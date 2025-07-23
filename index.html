@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praveen Kumar Nutulapati - Gen AI Engineer</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/babel-standalone@6.26.0/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom styles to mimic Apple’s typography and smooth animations */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale {
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    .profile-img {
+      width: 180px;
+      height: 225px;
+      border-radius: 12px; /* Apple-style rounded corners */
+      object-fit: cover;
+      background-color: #dfe8fa; /* Placeholder gray background */
+    }
+    .chat-message {
+      max-width: 80%;
+      padding: 8px 12px;
+      border-radius: 15px;
+      margin-bottom: 8px;
+      word-wrap: break-word;
+    }
+
+    .user-message {
+      background-color: #007bff;
+      color: white;
+      align-self: flex-end;
+      margin-left: auto;
+    }
+
+    .bot-message {
+      background-color: #e2e2e2;
+      color: #333;
+      align-self: flex-start;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body className="bg-gray-70">
+   <div id="root"></div>      
+  <script type="text/babel">
+    function App() {
+      const [messages, setMessages] = React.useState([{ text: "Hello! How can I help you?", sender: "bot" }]);
+      const [inputValue, setInputValue] = React.useState("");
+      const chatMessagesRef = React.useRef(null);
+
+      const sendMessage = async () => {
+        if (inputValue.trim() === "") return;
+
+        const newUserMessage = { text: inputValue, sender: "user" };
+        setMessages((prevMessages) => [...prevMessages, newUserMessage]);
+        setInputValue("");
+
+        try {
+          const response = await fetch("http://127.0.0.1:5000/chat", { // Ensure this matches your Flask port
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ query: inputValue }),
+          });
+          const data = await response.json();
+          const botResponse = { text: data.response || data.error, sender: "bot" };
+          setMessages((prevMessages) => [...prevMessages, botResponse]);
+        } catch (error) {
+          console.error("Error sending message:", error);
+          const errorMessage = { text: "Sorry, something went wrong.", sender: "bot" };
+          setMessages((prevMessages) => [...prevMessages, errorMessage]);
+        }
+      };
+
+      React.useEffect(() => {
+        if (chatMessagesRef.current) {
+          chatMessagesRef.current.scrollTop = chatMessagesRef.current.scrollHeight;
+        }
+      }, [messages]);
+
+      return (
+        <div className="min-h-screen bg-white text-gray-900">
+          {/* Header */}
+          <header className="bg-gray-900 text-white py-10 md:py-10">
+            <div className="container mx-auto px-4 flex items-center justify-center space-x-6 fade-in">
+              <img
+                src="pp.jpg" // Replace with your image URL
+                alt="Profile Image"
+                className="profile-img"
+              />
+              <div className="text-center">
+                <h1 className="text-5xl md:text-6xl font-bold mb-3 tracking-tight hover:text-gray-200 transition">Praveen Kumar Nutulapati</h1>
+                <p className="text-xl md:text-2xl font-light mb-6">Generative AI Engineer</p>
+                <div className="flex justify-center space-x-16 text-sm md:text-base">
+                  <a href="mailto:pknpraveenus@gmail.com" className="hover:text-gray-300 transition">e-mail: pknpraveenus@gmail.com</a>
+                  <a href="tel:+19133083090" className="hover:text-gray-300 transition">Contact: +1 (913) 565-8243</a>
+                  {/*<a href="https://linkedin.com/in/praveen-k-n" target="_blank" className="hover:text-gray-300 transition">LinkedIn</a>
+                  <a href="https://github.com/nutula?tab=repositories" target="_blank" className="hover:text-gray-300 transition">GitHub</a>*/}
+                </div>
+              </div>
+            </div>
+          </header>
+
+        {/* Main Content */}
+        <main className="container mx-auto px-4 py-16 max-w-4xl">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"  />
+
+          {/* Fixed Navbar */}
+          <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 glass-strong rounded-full px-6 py-3 border border-kawaii-pink/20 backdrop-blur-lg bg-white/30 transition-transform duration-200 hover:scale-110">
+            <div className="flex items-center space-x-6">
+              <button className="text-sm font-medium hover:text-kawaii-pink transition-colors flex items-center space-x-1"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <i className="fas fa-home text-xs transition-transform duration-200 hover:scale-110"></i>                
+                <span className="transition-transform duration-200 hover:scale-110">Home</span>
+              </button>
+              <button className="text-sm font-medium hover:text-kawaii-blue transition-colors flex items-center space-x-1"
+                onClick={() => document.getElementById('about-me-section').scrollIntoView({ behavior: 'smooth' })}>
+                <i className="transition-transform duration-200 hover:scale-110 fas fa-info-circle text-xs"></i>
+                <span className="transition-transform duration-200 hover:scale-110">About</span>
+              </button>
+              <button className="text-sm font-medium hover:text-neon-gold transition-colors flex items-center space-x-1"
+                onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}> 
+                <i className="transition-transform duration-200 hover:scale-110 fas fa-file-contract text-xs"></i>                
+                <span className="transition-transform duration-200 hover:scale-110">Contact</span>
+              </button>
+              <button className="text-sm font-medium hover:text-soft-pink transition-colors flex items-center space-x-1"
+              onClick={() => window.open('https://linkedin.com/in/praveen-k-n', '_blank')}>
+                <i className="transition-transform duration-200 hover:scale-110 fas fa-users text-xs"></i>
+                <span className="transition-transform duration-200 hover:scale-110">LinkedIn</span>
+              </button>
+              <button className="text-sm font-medium hover:text-soft-pink transition-colors flex items-center space-x-1"
+              onClick={() => window.open('https://github.com/nutula?tab=repositories', '_blank')}>
+                {/*<i className="fas fa-users text-xs"></i>*/}
+                <i class="transition-transform duration-200 hover:scale-110 fab fa-github fa-1.2x"></i>
+                <span className="transition-transform duration-200 hover:scale-110">GitHub</span>
+              </button>
+            </div>
+          </nav>
+
+          {/* Spacer to avoid content being hidden under fixed navbar */}
+          <div className="h-5"></div>
+            {/* Professional Summary */}
+            <section className="mb-16 fade-in">
+              <h2 className="text-3xl md::text-4xl font-semibold text-gray-900 mb-6 tracking-tight rounded-xl px-4 py-2 ">Professional Summary</h2>
+              <div className="bg-blue-30 rounded-2xl p-10 border border-gray-300 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 ring-1 ring-gray-200">
+              <p className="text-gray-700 leading-relaxed text-lg">
+                <li>I'm a Generative AI Engineer with 6+ years of experience and passionate about designing and deploying intelligent, scalable, and creative AI solutions. I specialize in working with Large Language Models (LLMs) like GPT and BERT, and Generative models such as Stable Diffusion, GANs, and VAEs. My experience spans a range of use cases including text generation, image synthesis, conversational AI, and personalized recommendations.</li>
+                <br></br>
+                <li>I regularly work with tools and frameworks such as Hugging Face Transformers, OpenAI, Ollama and LLamA Index/LangChain, and Pinecone/ChromaDB to experiment, fine-tune, and deploy Generative AI models. I also use FastAPI, Streamlit/Gradio, and Docker-Kubernetes to build full-stack GenAI applications with features like RAG architecture and dynamic conversational agents powered by OpenAI and Cohere APIs. I have created some NN models using PyTorch and CNN and RNN to predict output from images and label large scale data.</li>
+                <br></br>
+                <li>Beyond professional projects, I actively explore GenAI technologies on personal interest—building prototypes and experimenting with new models using Hugging Face and Ollama (Open sources) to play with different models to stay ahead of the curve in this fast-evolving space. Earlier in my career, I worked as a Data Engineer at Pfizer and Amara Raja Group, where I built large-scale data pipelines and real-time streaming systems using Spark, Kafka, Informatica, and Snowflake across AWS and Azure platforms. This foundation in data engineering enables me to bridge AI innovation with production-grade systems effectively. I’m committed to building responsible, transparent, and user-centric AI solutions that drive real-world impact.</li>
+                </p>
+              </div>
+            </section>
+
+            {/* Technical Skills */}
+              <section className="mb-16 fade-in">
+                <h2 className="text-3xl md::text-4xl font-semibold text-gray-900 mb-6 tracking-tight">Technical Skills</h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                  {/* Programming & Frameworks */}
+                  <div className="bg-white rounded-2xl p-8 shadow hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Programming & Frameworks</h3>
+                    <div className="flex flex-wrap gap-3">
+                      {['Python', 'PyTorch', 'TensorFlow','SQL', 'MySQL', 'FastAPI', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplot-lib', 'NLP', 'HTML', 'JSON', 'YAML', 'CSS', 'FlaskAPI', 'Transformers','Fine Tuning', 'LoRA', 'QLoRA', 'Prompt Engineering'].map(skill => (
+                        <span key={skill} className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm hover:bg-gray-200 transition">{skill}</span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Generative AI & ML */}
+                  <div className="bg-white rounded-2xl p-8 shadow hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Generative AI & ML</h3>
+                    <div className="flex flex-wrap gap-3">
+                      {['GPT', 'BERT', 'Stable Diffusion', 'GANs', 'VAEs', 'Conversational AI', 'RAG', 'Data Augmentation', 'LangChain', 'unsloth', 'LlamaIndex', 'HuggingFace', 'Pinecone', 'ChromaDB', 'Ollama', 'OpenAI', 'CNN', 'RNN'].map(skill => (
+                        <span key={skill} className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm hover:bg-gray-200 transition">{skill}</span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Cloud & Data Platforms */}
+                  <div className="bg-white rounded-2xl p-8 shadow hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Cloud & Data Platforms</h3>
+                    <div className="flex flex-wrap gap-3">
+                      {['Azure', 'AWS', 'GCP', 'Snowflake', 'Databricks', 'Kafka', 'Apache Spark', 'Hadoop', 'AWS Sagemaker', 'AWS Bedrock', 'Google VertexAI'].map(skill => (
+                        <span key={skill} className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm hover:bg-gray-200 transition">{skill}</span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Visualization & Deployment */}
+                  <div className="bg-white rounded-2xl p-8 shadow hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Visualization & Deployment</h3>
+                    <div className="flex flex-wrap gap-3">
+                      {['Power BI', 'Tableau', 'Streamlit', 'Gradio', 'Docker', 'Kubernetes', 'GitHub', 'CI/CD', 'FlaskAPI', 'FlashAPI'].map(skill => (
+                        <span key={skill} className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm hover:bg-gray-200 transition">{skill}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+
+            {/* Professional Experience */}
+            <section className="mb-16 fade-in">
+              <h2 className="text-3xl md::text-4xl font-semibold text-gray-900 mb-6 tracking-tight">Professional Experience</h2>
+              <div className="space-y-4">
+              <div className="bg-white rounded-2xl p-8 border border-gray-200 transition-all duration-100 group hover:shadow-xl hover:border-blue-200 hover:ring-2 hover:ring-blue-200">
+              <h3 className="text-xl md::text-2xl font-semibold text-gray-900">Gen AI Engineer</h3>
+              <p className="text-gray-600 text-lg">JPMorgan Chase & Co., New York, NY | May 2024 – Present</p>
+              <ul className="list-disc list-inside text-gray-700 mt-4 text-lg max-h-0 overflow-hidden transition-all duration-700 group-hover:max-h-[1000px]">
+                  <li>Designed and fine-tuned large language models (LLMs) such as GPT, BERT, and Hugging Face Transformers for NLP tasks including summarization and classification.</li>
+                  <li>Created and deployed GANs and VAEs for synthetic image generation and anomaly detection using PyTorch and TensorFlow.</li>
+                  <li>Fine-tuned diffusion models and Stable Diffusion pipelines for text-to-image generation applications in creative and marketing industries.</li>
+                  <li>Built and deployed LLM-based applications using FastAPI and Streamlit, containerized with Docker and orchestrated with Kubernetes for scalable deployment.</li>
+                  <li>Developed conversational UIs and interactive dashboards with Gradio and Streamlit for model testing and stakeholder demonstrations.</li>
+                  <li>Integrated Azure Event Hubs with Data Lake Storage and Databricks for massive-scale telemetry and behavioral data analytics.</li>
+                  <li>Applied data augmentation strategies using generative models to enhance computer vision and NLP training datasets.</li>
+                  <li>Developed generative AI-based personalized recommendation systems to boost user engagement and retention.</li>
+                  <li>Implemented embeddings models (OpenAI Ada, Sentence Transformers) for document similarity, clustering, and search using vector databases.</li>
+                  <li>Established CI/CD pipelines using Git, GitHub Actions, and Docker for automated deployments of generative AI services.</li>
+                  <li>Created interactive Power BI dashboards with advanced DAX for real-time executive insights.</li>
+                  <li>Delivered internal trainings on prompt engineering, LLM fine-tuning, and responsible GenAI deployment practices.</li>
+                  <li>Conducted A/B testing and user feedback loops to refine generative AI applications for improved relevance and satisfaction.</li>
+                  <li>Ensured responsible AI practices by evaluating and mitigating biases using fairness evaluation tools.</li>
+                  <li>Integrated OpenAI and Cohere APIs for conversational AI assistants with dynamic memory and structured output generation.</li>
+                  <li>Built end-to-end generative AI pipelines using retrieval-augmented generation (RAG) architectures with LangChain and Pinecone/FAISS vector databases.</li>
+                  </ul>
+                </div>
+                <div className="bg-white rounded-2xl p-8 border border-gray-200 transition-all duration-700 group hover:shadow-xl hover:border-blue-200 hover:ring-2 hover:ring-blue-200">
+                  <h3 className="text-xl md::text-2xl font-semibold text-gray-900">Data Engineer</h3>
+                  <p className="text-gray-600 text-lg">Pfizer, New York, NY | Mar 2023 – Apr 2024</p>
+                  <ul className="list-disc list-inside text-gray-700 mt-4 text-lg max-h-0 overflow-hidden transition-all duration-700 group-hover:max-h-[1000px]">
+                  <li>Orchestrated data workflows using AWS Step Functions and Lambda for event-driven automation.</li>
+                  <li>Monitored data infrastructure using CloudTrail, IAM policies, and CloudWatch for compliance and efficiency.</li>
+                  <li>Developed scalable ETL pipelines with Apache Spark and Python to process terabytes of data from heterogeneous sources.</li>
+                  <li>Designed preprocessing pipelines with Pandas, NumPy, and PySpark for data cleaning and embedding for generative model training.</li>
+                  <li>Integrated Apache Spark with Hive and JDBC sources for distributed data analysis.</li>
+                  <li>Utilized Kafka Connect for seamless integration between RDBMS, cloud storage, and Kafka topics.</li>
+                  <li>Implemented fault-tolerant Spark Streaming jobs with checkpointing and error handling.</li>
+                  <li>Maintained Hadoop ecosystems (HDFS, YARN, MapReduce) for large-scale data processing.</li>
+                  <li>Created complex SQL and PL/SQL scripts to transform large datasets for analytics and ML use cases.</li>
+                  <li>Automated data workflows using Apache Airflow for dynamic scheduling and monitoring.</li>
+                  <li>Managed Snowflake data warehouses, leveraging auto-scaling and partitioning for performance optimization.</li>
+                  <li>Developed Tableau dashboards and managed publishing, roles, and permissions for secure access.</li>
+                  <li>Collaborated with analysts and scientists to deliver curated datasets and data-driven insights.</li>
+                  <li>Applied Git, GitHub, and GitLab for CI/CD pipelines to ensure reproducibility and collaboration.</li>
+                  </ul>
+                </div>
+                <div className="bg-white rounded-2xl p-8 border border-gray-200 transition-all duration-700 group hover:shadow-xl hover:border-blue-200 hover:ring-2 hover:ring-blue-200">
+                  <h3 className="text-xl md::text-2xl font-semibold text-gray-900">Data Engineer</h3>
+                  <p className="text-gray-600 text-lg">Amara Raja Group, Hyderabad, India | Nov 2019 – Jul 2022</p>
+                  <ul className="list-disc list-inside text-gray-700 mt-4 text-lg max-h-0 overflow-hidden transition-all duration-700 group-hover:max-h-[1000px]">
+                  <li>Designed and orchestrated scalable data integration workflows using Azure Data Factory and Azure Functions.</li>
+                  <li>Built ETL pipelines to extract, transform, and load data from diverse sources into Azure SQL DB.</li>
+                  <li>Developed complex ETL mappings in Informatica PowerCenter for enterprise data warehouses.</li>
+                  <li>Built data APIs and microservices using Python and REST frameworks for third-party integrations.</li>
+                  <li>Processed real-time data with Spark Streaming and Kafka for immediate insights and alerts.</li>
+                  <li>Optimized PySpark jobs for performance improvements in execution time and memory usage.</li>
+                  <li>Managed Hadoop clusters with Cloudera/Hortonworks for enterprise-grade data lake operations.</li>
+                  <li>Leveraged Apache Sqoop and Flume for data import/export between Hadoop and RDBMS systems.</li>
+                  <li>Configured NoSQL clusters for scalability and high availability with minimal downtime.</li>
+                  <li>Automated workflows using Airflow for event-based and time-based scheduling.</li>
+                  <li>Led migration of on-prem databases to Snowflake, enabling scalable data sharing.</li>
+                  <li>Developed Power BI and Looker dashboards for real-time business performance tracking.</li>
+                  <li>Managed Power BI Service workspaces, permissions, and user access for secure reporting.</li>
+                  </ul>
+                </div>
+                <div className="bg-white rounded-2xl p-8 border border-gray-200 transition-all duration-700 group hover:shadow-xl hover:border-blue-200 hover:ring-2 hover:ring-blue-200">
+                  <h3 className="text-xl md::text-2xl font-semibold text-gray-900">Data Engineer</h3>
+                  <p className="text-gray-600 text-lg">HDFC Life, Mumbai, India | Aug 2017 – Oct 2019</p>
+                  <ul className="list-disc list-inside text-gray-700 mt-4 text-lg max-h-0 overflow-hidden transition-all duration-700 group-hover:max-h-[1000px]">
+                    <li> Developed and optimized data lakes and warehouses using Amazon S3 and AWS EC2 for high performance and cost efficiency.</li>
+                    <li>Ensured data availability and disaster recovery with cross-region replication and S3 lifecycle policies.</li>
+                    <li>Maintained Informatica workflows with robust failure recovery and reprocessing mechanisms.</li>
+                    <li>Integrated Python-based ML models with pipelines for automated predictive analytics and real-time insights.</li>
+                    <li>Tuned Spark jobs by optimizing memory configurations, partitioning strategies, and broadcast joins.</li>
+                    <li>Processed data using Hadoop, Pig, and Hive scripts for large-scale analytics.</li>
+                    <li>Prepared data with PySpark for downstream analytics and model training.</li>
+                    <li>Built advanced Tableau dashboards with interactive filters, calculated fields, and parameters.</li>
+                    <li>Utilized Tableau Prep for data extraction, transformation, and creation of curated datasets.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* Education */}
+              <section className="mb-8 fade-in">
+                <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6 tracking-tight">Education </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <div className="bg-gray-50 rounded-2xl p-5 border border-gray-300 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 ring-1 ring-gray-200">
+                    <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
+                      Master's in Computer Science
+                    </h3>
+                    <p className="text-gray-600 text-lg">
+                      University of Central Missouri || <br></br> Augest 2022 – December 2024
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-2xl p-5 border border-gray-300 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 ring-1 ring-gray-200">
+                    <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
+                      B.Tech in Mechanical Engineering
+                    </h3>
+                    <p className="text-gray-600 text-lg">
+                      JNTUH, Hyderabad - India || <br></br> Augest 2014 – May 2018
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+
+              <div className="h-5"></div>
+            
+              <section className="text-center mb-16 fade-in">
+              <div className="fixed bottom-6 right-6">
+                <div className="group relative">
+                  {/* Minimized Header */}
+                  <div className="bg-gray-900 text-white text-lg font-semibold rounded-full px-6 py-3 shadow-xl cursor-pointer">
+                    Chat with Me
+                  </div>
+                  {/* Expanded Chat Box on hover */}
+                  <div className="absolute bottom-14 right-0 w-100 bg-gray-100 rounded-3xl shadow-xl overflow-hidden opacity-0 scale-100 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-300 ease-out pointer-events-none group-hover:pointer-events-auto transform translate-y-2">
+                    <div className="p-4 bg-gray-900 text-white text-lg font-semibold rounded-t-3xl">
+                      Let's Chat
+                    </div>
+                  <div ref={chatMessagesRef} className="h-80 p-4 overflow-y-auto space-y-2 flex flex-col">
+                    {messages.map((msg, index) => (
+                      <div key={index} className={`chat-message ${msg.sender === "user" ? "user-message" : "bot-message"}`}>
+                        {msg.text}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex items-center p-4 border-t">
+                      <input
+                        type="text"
+                        placeholder="Ask me..."
+                        className="flex-1 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                        value={inputValue}
+                        onChange={(e) => setInputValue(e.target.value)}
+                        onKeyPress={(e) => {
+                          if (e.key === "Enter") {
+                            sendMessage();
+                          }
+                        }}
+                      />
+                      <button 
+                        className="ml-2 bg-gray-900 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition"
+                        onClick={sendMessage}
+                      >
+                        Send
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section className="text-left-bottom mb-8 fade-in">
+              <div id="about-me-section"
+                className="bg-white rounded-2xl p-4 shadow-x0.5 hover:shadow-1xl transition-all duration-300 hover">
+                <h1 className="text-xl md:text-1xl font-semibold text-gray-900"> About Me </h1>
+                <p className="text-gray-700 text-s">
+                  I’m Generative AI Engineer and Data Engineer with over 7 years of experience and have Master’s in Computer Science from University of Central Missouri. I have both professional and academic experience in building AI models and Data Pipe-lines and also experienced in ETL operations and cloud architecture. I have build Chatbots, Conversational agents, Text summarisation tools and NLP tasks using Generative models and Machine Learing frameworks.
+                </p>
+              </div>
+                <br></br>
+              <div className="bg-white rounded-2xl p-4 shadow-x0.5 hover:shadow-1xl transition-all duration-300 hover">
+                  <h2 className="text-xl md:text-1xl font-semibold text-gray-700"> Contact Info </h2>
+                  <p className="text-gray-600 text-script">
+                    Feel free to reach out to me at <b>pknpraveenus@gmail.com</b> or give me a call at <b>(913) 565-8243</b>. <br></br> Address: 10324 Conser St, Apt 2P; Overland Park - Kansas - 66212 <br></br> I'm always excited to connect and discuss potential collaborations or projects! Currently I'm Open to Work.
+                  </p>
+                </div>
+                <br></br>
+              <a
+                href="https://drive.google.com/file/d/1nt1EEkb5Gt3FniI8nRG0OV6cF2E1iPt8/view?usp=sharing"
+                download
+                target="_blank"
+                className="inline-block bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 transition"
+              >
+                Download Resume
+              </a>
+              
+            </section>
+          </main>
+
+          {/* Footer */}
+          <footer className="bg-gray-900 text-gray-400 py-3 overflow-hidden">
+            <div className="relative w-full">
+              <div className="flex whitespace-nowrap animate-marquee">
+                <p className="text-sm px-4">
+                  Praveen Kumar Nutulapati -- Generative AI Engineer -- Data Engineer -- Machine Learning -- +1 (913) 565-8243 </p>
+                <p className="text-sm px-4">
+                  Praveen Kumar Nutulapati -- Generative AI Engineer -- Data Engineer -- Machine Learning -- +1 (913) 565-8243 </p>
+              </div>
+            </div>
+
+            <style jsx>{`
+              @keyframes marquee {
+                0% { transform: translateX(0%); }
+                100% { transform: translateX(-50%); }
+              }
+              .animate-marquee {
+                display: inline-flex;
+                animation: marquee 15s linear infinite;
+              }
+            `}</style>
+          </footer>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
